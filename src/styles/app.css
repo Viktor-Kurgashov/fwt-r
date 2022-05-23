@@ -1,0 +1,140 @@
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #b3b3b3;
+  border-radius: 5px;
+}
+
+.app {
+  --theme-text-color: #000000;
+  --theme-background-color: #ffffff;
+  --theme-painting-background: #f2f2f2;
+  background: var(--theme-background-color);
+  color: var(--theme-text-color);
+  padding: 0 5% 200px;
+  min-height: 100vh;
+}
+
+.app_theme-dark {
+  --theme-text-color: #ffffff;
+  --theme-background-color: #000000;
+  --theme-painting-background: #262626;
+}
+
+.app__header,
+.app__main {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.app__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 135px;
+}
+
+.app__main {
+  display: flex;
+  flex-direction: column;
+  row-gap: 45px;
+}
+
+.app__logo-link {
+  background: url('../assets/logo.svg') no-repeat center;
+  background-size: contain;
+  width: 60px;
+  height: 60px;
+}
+
+.app__theme-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app__filters-item {
+  position: relative;
+  min-width: 100px;
+  min-height: 50px;
+}
+
+
+
+@media (max-width: 767px) {
+  .app__header {
+    height: 120px;
+  }
+
+  .app__filters {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+  }
+
+  .app__pagination {
+    align-self: center;
+    order: 1;
+  }
+
+  .app__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    order: 2;
+  }
+}
+
+
+
+@media (min-width: 768px) {
+  .app__header,
+  .app__main {
+    max-width: 800px;
+  }
+
+  .app__filters {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .app__filters-item {
+    width: 24%;
+  }
+
+  .app__list {
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: 4%;
+    row-gap: 35px;
+  }
+
+  .app__list-item {
+    width: 48%;
+  }
+
+  .app__pagination {
+    align-self: flex-start;
+  }
+}
+
+
+
+@media (min-width: 1024px) {
+  .app__header,
+  .app__main {
+    max-width: 1200px;
+  }
+
+  .app__list-item {
+    width: 32%;
+  }
+
+  .app__list {
+    column-gap: 2%;
+  }
+}

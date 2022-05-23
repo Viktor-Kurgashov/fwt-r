@@ -1,0 +1,59 @@
+.paintings-loading__aspect-ratio,
+.painting__aspect-ratio {
+  background-color: var(--theme-painting-background);
+  border-radius: 4px;
+  position: relative;
+  padding-top: 75%;
+}
+
+.paintings-loading__text {
+  position: absolute;
+  left: calc(50% - 70px);
+  top: calc(50% - 15px);
+  width: 140px;
+  height: 30px;
+  font-size: 19px;
+  font-weight: bold;
+  line-height: 30px;
+  text-align: center;
+}
+
+.painting__aspect-ratio {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.painting__image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.painting__caption-mount {
+  border-radius: 0 0 4px 4px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  overflow-y: hidden;
+}
+
+.painting__caption {
+  color: black;
+  background: rgba(255, 255, 255, 0.75);
+  transform: translate(0, calc(100% - 48px));
+  transition: transform 0.2s;
+  padding: 10px 16px 13px;
+}
+
+.painting:hover .painting__caption {
+  transform: translate(0, 0);
+}
+
+.painting__caption > p {
+  margin-top: 4px;
+}
